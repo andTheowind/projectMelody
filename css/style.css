@@ -88,13 +88,13 @@ main {
     justify-content: space-around;
 }
 
-.home-iamge path {
+.home-image path {
     opacity: 0;
     cursor: pointer;
 }
 
-.home-iamge path:hover {
-    opacity: 1;
+.home-image path:hover {
+    opacity: 1 !important;
 }
 
 .counter-group {
