@@ -1,7 +1,10 @@
 let counterArrowUp = document.querySelector('.counter-arrow-up');
 let counterArrowDown = document.querySelector('.counter-arrow-down');
 let counter = document.querySelector('.counter');
-let floor = Array.from(document.querySelectorAll('.home-image > path'))
+let floor = Array.from(document.querySelectorAll('.home-image > path'));
+let modal = document.querySelector('.modal');
+let openModal = document.querySelector('.btn-primary');
+let closeModal = document.querySelector('.modal-close-button');
 
 const counterPlus = () => {
     if(counter.textContent < 17) {
@@ -29,3 +32,12 @@ const floorColorize = () => {
 counterArrowUp.addEventListener('click', counterPlus);
 counterArrowDown.addEventListener('click', counterMinus);
 
+openModal.addEventListener('click', function() {
+    modal.classList.remove('is-close');
+    modal.classList.add('is-open');
+});
+
+closeModal.addEventListener('click', function() {
+    modal.classList.remove('is-open');
+    modal.classList.add('is-close');
+});
